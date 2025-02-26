@@ -9,6 +9,7 @@ RESPONSIBILITYS:
 
 */
 import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -22,37 +23,51 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.Border;
 
 public class page {
     public static void main(String[] args) {
 
-
-
-    JPanel bottomPanel = new JPanel();
-    bottomPanel.setBackground(Color.lightGray);
-    bottomPanel.setPreferredSize(new Dimension(50,50));
-
-
-
-
     JPanel topPanel = new JPanel();
     JPanel centerPanel = new JPanel();
-    topPanel.setBackground(Color.BLACK);
-    //centerPanel.setBackground();
-    centerPanel.setLayout(new FlowLayout(FlowLayout.LEADING, 20, 20));
-    //centerPanel.setLayout(new GridLayout(3,4, 20, 20));
+    JPanel headerContainer = new JPanel();
+    JLabel title = new JLabel("CALIBRI VINYLS");
+    JTextField textField = new JTextField("Search for Albums..."); // Creates a text field with 20 columns
+    textField.setBounds(300, 150, 150, 30);
 
-    topPanel.setPreferredSize(new Dimension(100,100));
+
+
+    headerContainer.setPreferredSize(new Dimension(800,180));
+    headerContainer.setLayout(null); 
+    headerContainer.setBackground(Color.black);
+
+
+    title.setFont(new Font("Calibri", Font.BOLD,60));
+    title.setForeground(Color.white);
+    title.setBounds(150, -80, 800, 300);
+    //title.setLayout(new FlowLayout());
+    headerContainer.add(title);
+    headerContainer.add(textField);
+
+
+
+    topPanel.setBackground(Color.BLACK);
+    topPanel.setPreferredSize(new Dimension(500,200));
+    topPanel.add(headerContainer);
+    
+    //JButton searchButton = new JButton();
+    //searchButton.setVerticalAlignment(JButton.BOTTOM);
+
+    //topPanel.add(searchButton); 
+
+
+
+    centerPanel.setLayout(new FlowLayout(FlowLayout.LEADING, 20, 20));
     centerPanel.setPreferredSize(new Dimension(800,2000));// dynamic resize
-    //centerPanel.setPreferredSize(null);
  
-    JLabel header = new JLabel("CALIBRI VYNELS");
-    header.setFont(new Font("Calibri", Font.BOLD,60));
-    header.setForeground(Color.white);
-    header.setVerticalAlignment(JLabel.CENTER);
-    topPanel.add(header);
+   
 
 
     for(int i=1;i<15;i++)
@@ -74,7 +89,7 @@ public class page {
     
 
     MyFrame myFrame = new MyFrame();
-    myFrame.setSize(1300,800);
+    myFrame.setSize(1350,800);
     //myFrame.add(topPanel,BorderLayout.NORTH);
     //myFrame.add(centerPanel,BorderLayout.CENTER);
 
@@ -87,6 +102,13 @@ public class page {
     myFrame.getContentPane().setLayout(new BorderLayout());
     myFrame.getContentPane().add(scrollPane, BorderLayout.CENTER);
 
+
+
+   JPanel toptopPanel = new JPanel();
+    toptopPanel.setBackground(Color.lightGray);
+    toptopPanel.setPreferredSize(new Dimension(50,50));
+    centerPanel.add(toptopPanel,BorderLayout.NORTH);
+
     myFrame.add(topPanel,BorderLayout.NORTH);
     //myFrame.add(bottomPanel
 
@@ -94,6 +116,7 @@ public class page {
 
 
 
+   
 
 
 
@@ -102,4 +125,3 @@ public class page {
     myFrame.setVisible(true);
     }
 }
-
