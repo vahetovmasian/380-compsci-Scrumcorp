@@ -1,4 +1,6 @@
 // Source code is decompiled from a .class file using FernFlower decompiler.
+// this file handles the top title text but also handles the textbox for the search. 
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.LayoutManager;
