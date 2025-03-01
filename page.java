@@ -6,8 +6,8 @@ METHODS:
     Navigate: a method from going from one page to another
 RESPONSIBILITYS:
     Search:   calls upon class to search for things ???
-
 */
+
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
@@ -16,6 +16,7 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.ScrollPane;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,57 +33,23 @@ public class page {
 
     JPanel topPanel = new JPanel();
     JPanel centerPanel = new JPanel();
-    JPanel headerContainer = new JPanel();
-    JLabel title = new JLabel("CALIBRI VINYLS");
-    JTextField textField = new JTextField("Search for Albums..."); // Creates a text field with 20 columns
-    textField.setBounds(300, 150, 150, 30);
-
-
-
-    headerContainer.setPreferredSize(new Dimension(800,180));
-    headerContainer.setLayout(null); 
-    headerContainer.setBackground(Color.black);
-
-
-    title.setFont(new Font("Calibri", Font.BOLD,60));
-    title.setForeground(Color.white);
-    title.setBounds(150, -80, 800, 300);
-    //title.setLayout(new FlowLayout());
-    headerContainer.add(title);
-    headerContainer.add(textField);
-
-
+    HeaderPanel headerContainer = new HeaderPanel(); 
 
     topPanel.setBackground(Color.BLACK);
     topPanel.setPreferredSize(new Dimension(500,200));
     topPanel.add(headerContainer);
-    
-    //JButton searchButton = new JButton();
-    //searchButton.setVerticalAlignment(JButton.BOTTOM);
-
-    //topPanel.add(searchButton); 
-
-
 
     centerPanel.setLayout(new FlowLayout(FlowLayout.LEADING, 20, 20));
     centerPanel.setPreferredSize(new Dimension(800,2000));// dynamic resize
  
    
-
-
-    for(int i=1;i<15;i++)
+    for(int i=1;i<15;i++)                   // adds temp items to the page 
     {
-        MyPanel xpanel = new MyPanel();
+        ItemPanel xpanel = new ItemPanel();
         xpanel.setName("panel"+i);
         centerPanel.add(xpanel);
         
     }
-    //MyPanel panel2 = new MyPanel();
-    //centerPanel.add(panel1); 
-    //centerPanel.add(panel2);
-
-
-
 
 
 
@@ -90,10 +57,6 @@ public class page {
 
     MyFrame myFrame = new MyFrame();
     myFrame.setSize(1350,800);
-    //myFrame.add(topPanel,BorderLayout.NORTH);
-    //myFrame.add(centerPanel,BorderLayout.CENTER);
-
-
 
     JScrollPane scrollPane = new JScrollPane(centerPanel);
     scrollPane.setPreferredSize(new Dimension(800, 600));
@@ -101,27 +64,7 @@ public class page {
 
     myFrame.getContentPane().setLayout(new BorderLayout());
     myFrame.getContentPane().add(scrollPane, BorderLayout.CENTER);
-
-
-
-   JPanel toptopPanel = new JPanel();
-    toptopPanel.setBackground(Color.lightGray);
-    toptopPanel.setPreferredSize(new Dimension(50,50));
-    centerPanel.add(toptopPanel,BorderLayout.NORTH);
-
     myFrame.add(topPanel,BorderLayout.NORTH);
-    //myFrame.add(bottomPanel
-
-
-
-
-
-   
-
-
-
-
-
     myFrame.setVisible(true);
     }
 }
