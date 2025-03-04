@@ -6,6 +6,9 @@ METHODS:
     Navigate: a method from going from one page to another
 RESPONSIBILITYS:
     Search:   calls upon class to search for things ???
+
+
+    MUST HAVE productPanel.java, products folder, MyFrame.java
 */
 
 import java.awt.BorderLayout;
