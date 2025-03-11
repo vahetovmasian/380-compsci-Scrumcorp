@@ -15,44 +15,45 @@ public class Product {
     String genre;
     double price;
     int releaseYear;
-    String[] artistList;
+    String artist;
     int productNum;
     String mediaType;
     String[] track;
 
-    public Product(String title, String genre, double price, int releaseYear, String[] artistList, int productNum, String mediaType, String[] track) {
+    public Product(String title, String genre, double price, int releaseYear, String artist, int productNum, String mediaType, String[] track) {
         this.title = title;
         this.genre = genre;
         this.price = price;
-        this.releaseYear = ReleaseYear;
-        this.artistList = artistList;
+        this.releaseYear = releaseYear;
+        this.artist = artist;
         this.productNum = productNum;
         this.mediaType = mediaType;
         this.track = track;
     }
     //Standard getter methods 
-    getTitle(){
+   public String getTitle(){
         return title;
     }
-    getGenre(){
+   public String getGenre(){
         return genre;
     }
-    getPrice(){
+    public double getPrice(){
         return price;
     }
-    getReleaseYear(){
+    public int getReleaseYear(){
         return releaseYear;
     }
-    getArtist(){
-        return artistList;
+    public String getArtist(){
+        return artist;
     }
-    getProductNum(){
+    public int getProductNum(){
         return productNum;
     }
-    getMediaType(){
+    public String getMediaType(){
         return mediaType;
     }
-    getTrack(){
+    public String[] getTrack(){
         return track;
     }
+}
 }
