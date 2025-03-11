@@ -14,11 +14,12 @@ public class Search {
       
       
       for (Product product : productArray) { //iterate through array of products 
-            String title = product.getTitle().toLowerCase();
+            String title = product.getTitle().toLowerCase(); 
             String genre = product.getGenre().toLowerCase();
             String artist = product.getArtist().toLowerCase();
+            String mediaType = product.getMediaType().toLowerCase();
             
-            if (title.contains(lowerCaseQuery) || genre.contains(lowerCaseQuery) || artist.contains(lowerCaseQuery) { //checks the title, genre, and artist attributes
+            if (title.contains(lowerCaseQuery) || genre.contains(lowerCaseQuery) || artist.contains(lowerCaseQuery) || mediaType.contains(lowerCaseQuery)) { //checks the title, genre, and artist attributes
                results[count] = product; // assigns the matched product to  the index of the value of count 
                count++; // increments counter because a product was found 
             }
@@ -29,8 +30,9 @@ public class Search {
       } 
       
       Product [] finalResults = new Product[count]; //creates an array with the number of results 
-      System.arraycopy(results, 0, finalResults, 0, count); //copy results into final array
+      System.arraycopy(results, 0, finalResults, 0, count); //copy results into final array of size count 
       return finalResults; //return the array with correct size
       
-}  
+   }
+}
         
