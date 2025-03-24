@@ -3,24 +3,15 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.security.DigestException;
-import java.awt.Button;
-import javax.swing.ImageIcon;
-import java.awt.Font;
 import javax.swing.JLabel;
-import javax.swing.JScrollPane;
 import javax.swing.border.Border;
-
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.awt.event.ActionEvent;
 
 public class productPanel extends JPanel implements ActionListener {
@@ -28,24 +19,23 @@ public class productPanel extends JPanel implements ActionListener {
    String albumName;
    String albumArtist; 
    String genre; 
-   String coverFileName;
-   
+   String coverFileString;
    JLabel itemLabel = new JLabel();
    JLabel artistLabel = new JLabel();
    JPanel spacer = new JPanel(); 
   
 
-   productPanel(String albumName,String albumArtist, String genre, String coverFileName) {
+   productPanel(String albumName,String albumArtist, String genre, String coverFileString) throws FileNotFoundException {
       Border border = BorderFactory.createLineBorder(Color.black, 1);
       this.albumName = albumName;
       this.albumArtist = albumArtist; 
       this.genre = genre;
-      this.coverFileName = coverFileName; 
+      this.coverFileString = coverFileString; 
 
       spacer.setPreferredSize(new Dimension(20,18));
       spacer.setBackground(Color.WHITE);
       
-      ImageIcon image = new ImageIcon("products/" + coverFileName);
+      ImageIcon image = new ImageIcon("products/" + coverFileString);
       itemLabel.setText(albumName);
       itemLabel.setFont(new Font("Calibri", Font.BOLD,16));
       itemLabel.setIcon(image);
