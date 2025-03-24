@@ -10,25 +10,31 @@
      Getters for each attribute 
      Mabye more added in future 
   */ 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Product {
     String title;
+    String artist;
     String genre;
     double price;
     int releaseYear;
-    String artist;
     int productNum;
     String mediaType;
-    String[] track;
+    String coverFileString; 
+    String trackList;
 
-    public Product(String title, String genre, double price, int releaseYear, String artist, int productNum, String mediaType, String[] track) {
+    public Product(String title, String artist, String genre, double price, int releaseYear, int productNum, String mediaType, String coverFileString, String trackList) {
         this.title = title;
-        this.genre = genre;
+        this.artist = artist;
         this.price = price;
         this.releaseYear = releaseYear;
-        this.artist = artist;
+        this.genre = genre;
         this.productNum = productNum;
         this.mediaType = mediaType;
-        this.track = track;
+        this.trackList = trackList;
+        this.coverFileString = coverFileString; 
     }
     //Standard getter methods 
    public String getTitle(){
@@ -52,8 +58,28 @@ public class Product {
     public String getMediaType(){
         return mediaType;
     }
-    public String[] getTrack(){
-        return track;
+    public String getTrack(){
+        return trackList;
     }
-}
+    public String getCoverFileString(){
+        return coverFileString; 
+    }
+
+    public static Product[] generateProductArray() throws FileNotFoundException{      //takes a line from txt file and creates an object product, then puts the product into an array.
+        Product ProductArray[] = new Product[34];
+        Scanner input = new Scanner(new File("products/inventory")); 
+        int count = 0; 
+        while(input.hasNextLine()){
+            String[] array = input.nextLine().split(",");
+            if(array[0].equals("end"))
+            break; 
+            System.out.println(array[0]);
+
+            Product singleProduct = new Product(array[0], array[1], array[2], 9.99, 2016, 99, array[6], array[7], "list"); 
+            ProductArray[count] = singleProduct; 
+            count++;
+        }
+        input.close();
+        return ProductArray; 
+    }
 }
