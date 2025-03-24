@@ -28,6 +28,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -37,24 +38,24 @@ import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.Border;
 
-public class page {
+public class Page {
 
     static JPanel centerPanel = new JPanel();
+    static JPanel topPanel = new JPanel();
 
-    public static void main(String[] args) throws FileNotFoundException{
+    Page() throws FileNotFoundException{
 
-        JPanel topPanel = new JPanel();
         HeaderPanel headerContainer = new HeaderPanel();            //container for the title/search bar 
 
         topPanel.setBackground(Color.BLACK);
-        topPanel.setPreferredSize(new Dimension(500,200));
+        topPanel.setPreferredSize(new Dimension(500,160));
         topPanel.add(headerContainer);
 
         centerPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
-        centerPanel.setPreferredSize(new Dimension(800,2000));                  //needs to be fixed to dynamic resize 
+        centerPanel.setPreferredSize(new Dimension(800,3400));                  //needs to be fixed to dynamic resize 
         centerPanel.setBackground(Color.WHITE);
 
-        generateProductPanels();
+        Page.generateProductPanels();
 
         MyFrame myFrame = new MyFrame();
         myFrame.setSize(1350,800);
@@ -69,97 +70,24 @@ public class page {
         myFrame.setVisible(true);
     }
 
-    public static String returnStringIfSubstringMatches(String text, String substring) {
-        if (text != null && text.contains(substring)) {
-            return text;
-        }
-        return null;
-    }
-                    
-                    
-    public static void generateProductPanels() throws FileNotFoundException {    // generates all productPanels from input file
+    public static void genSearchPanels(Product[] products) throws FileNotFoundException {
         centerPanel.removeAll();
-        Scanner input = new Scanner(new File("products/inventory"));
-        while(input.hasNextLine()){
-            String[] array = input.nextLine().split(",");
-            if (array[0].equals("end"))
-            break; 
-
-            productPanel product = new productPanel(array[0],array[1], array[2], array[3]);
-            centerPanel.add(product); 
+        for (Product product: products){
+            productPanel prodPanel = new productPanel(product.getTitle(), product.getArtist(), product.getGenre(),product.getCoverFileString()); 
+            centerPanel.add(prodPanel); 
             centerPanel.revalidate();
-            centerPanel.repaint();
-        }  
-        input.close();
-    }
-    
-    public static void searchPanels(String productString) throws FileNotFoundException {   // searches through panels and adds only ones that match
-                                                                                            // the stirng or substing matches.
-        Scanner input = new Scanner(new File("products/inventory"));
-        centerPanel.removeAll(); 
-        while(input.hasNextLine()){
-            String[] array = input.nextLine().split(",");
-            if (array[0].equals("end"))
-            break; 
-
-            productPanel product = new productPanel(array[0],array[1], array[2], array[3]);
-            String tempstring; 
-            tempstring = returnStringIfSubstringMatches(product.getAlbumName().toLowerCase(),productString.toLowerCase());  
-            if (product.getAlbumName().toLowerCase().equals(tempstring)){               // turns all strings to lowercase before compare
-                                                                                        // so that search case sensitive doesnt matter
-                centerPanel.add(product); 
-            }
-
-            centerPanel.revalidate();
-            centerPanel.repaint();
-        }  
-        input.close();
-    }
-
-    public static class HeaderPanel extends JPanel implements ActionListener {  // class for handling search box/button
-        JLabel title = new JLabel("CALIBRI VINYLS");
-        JTextField textField = new JTextField("Search for Albums..."); 
-        JButton searchButton = new JButton("search");
-        String searchString; 
-         
-        HeaderPanel() {
-            title.setFont(new Font("Calibri", Font.BOLD,60));
-            title.setForeground(Color.white);
-            title.setBounds(150, -80, 800, 300);
-
-            textField.setBounds(310, 140, 155, 30);
-            searchButton.addActionListener(this); 
-            searchButton.setBounds(470,140,70,30);
-
-            this.setBackground(Color.BLACK);
-            this.setPreferredSize(new Dimension(800,180));
-            this.setLayout(null);
-            this.add(title);
-            this.add(textField);
-            this.add(searchButton); 
-            }
-        
-        public void actionPerformed(ActionEvent e) {      //actual part where search button decies to search for panels
-            if(e.getSource()==searchButton){              // or decides to generate all panels. 
-                System.out.println(textField.getText());
-                searchString = textField.getText(); 
-                try {
-                searchPanels(searchString);
-                } catch (FileNotFoundException e1) {
-                    e1.printStackTrace();
-                }
-            }
-            if (searchString.equals(""))
-                try {
-                generateProductPanels();
-                } catch (FileNotFoundException e1) {
-                    e1.printStackTrace();
-                }
-            }
-        
-        public String getString(){
-            return searchString;
+            centerPanel.repaint(); 
         }
     }
 
+    public static void generateProductPanels() throws FileNotFoundException {
+        centerPanel.removeAll();
+        Product prodArray[] = Product.generateProductArray();
+        for (Product product: prodArray){
+            productPanel prodPanel = new productPanel(product.getTitle(), product.getArtist(), product.getGenre(),product.getCoverFileString()); 
+            centerPanel.add(prodPanel); 
+            centerPanel.revalidate();
+            centerPanel.repaint(); 
+        }
+    }
 }
