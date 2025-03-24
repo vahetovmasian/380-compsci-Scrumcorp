@@ -6,7 +6,7 @@ public class Search {
       this.productArray = products;
    }
    
-   public Product[] search(String query) { //search method to return products matching the query
+   public Product[] searchProducts(String query) { //search method to return products matching the query
       Product[] results = new Product[productArray.length]; //array storing matching products
       int count = 0; //tracks how many matches 
       
