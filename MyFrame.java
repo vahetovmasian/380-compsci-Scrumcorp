@@ -1,24 +1,13 @@
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
-public class MyFrame extends JFrame implements ActionListener{
-
-
-    MyFrame() {
+public class MyFrame extends JFrame{
+    
+    MyFrame(){
+        this.setLayout(new BorderLayout());
         this.setTitle("GUI");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600,400);
+        this.setSize(1350,800);
         this.setVisible(true);
-    
-        //frame.setLayout(null);
-        //frame.setLayout(new GridLayout(3,4)); //new GridLayout(4,3,1,1)
-           
-        }
-
-
-    public void actionPerformed(ActionEvent e) {
-
     }
-
 }
