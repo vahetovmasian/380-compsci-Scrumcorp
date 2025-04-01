@@ -27,7 +27,7 @@ public class Account1 {
                                 String words2;
                                 while ((words2 = br3.readLine()) != null) {
                                     if (words2.equals(typePass)) {
-                                        System.out.println("You are now logged in");
+                                        //println("You are now logged in");
                                     } else {
                                         System.out.println("Incorrect Password");
                                     }
