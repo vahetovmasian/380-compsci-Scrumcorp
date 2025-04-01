@@ -1,7 +1,13 @@
+/* 
+handles switching between pages within the JFrame "myWindow"
+
+
+ */
+
 import java.awt.BorderLayout;
 
 public class WindowManager {
-    static MyFrame myWindow = new MyFrame();
+    static MyWindow myWindow = new MyWindow();
     static ProductListingPage productListingPage = new ProductListingPage();
     static LoginPage loginPage = new LoginPage();
 
