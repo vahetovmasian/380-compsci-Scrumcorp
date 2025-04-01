@@ -1,2 +1,3 @@
 # 380-compsci
-making a website that sells vinyls cds and other music related goods 
+the new code is in the src folder 
+
