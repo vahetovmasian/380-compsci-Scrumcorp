@@ -17,6 +17,8 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.io.IOException;
+
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -24,7 +26,8 @@ public class ProductListingPage extends JPanel{
     static JPanel containerPanel = new JPanel(); 
     static JPanel centerPanel = new JPanel();
     static JPanel topPanel = new JPanel();
-    static JScrollPane scrollPane = new JScrollPane(centerPanel);     
+    static JScrollPane scrollPane = new JScrollPane(centerPanel);   
+    static JLabel label = new JLabel("test Label");   
     
         ProductListingPage(){
             try {
