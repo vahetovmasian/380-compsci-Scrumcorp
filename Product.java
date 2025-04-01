@@ -73,7 +73,7 @@ public class Product {
             String[] array = input.nextLine().split(",");
             if(array[0].equals("end"))
             break; 
-            System.out.println(array[0]);
+            //System.out.println(array[0]);
 
             Product singleProduct = new Product(array[0], array[1], array[2], 9.99, 2016, 99, array[6], array[7], "list"); 
             ProductArray[count] = singleProduct; 

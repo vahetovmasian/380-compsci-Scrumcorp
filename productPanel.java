@@ -50,7 +50,6 @@ public class productPanel extends JPanel implements ActionListener {
          Image resizedImage = image.getScaledInstance(200, 200, Image.SCALE_SMOOTH);
          ImageIcon imageIcon = new ImageIcon(resizedImage);
          itemLabel.setIcon(imageIcon);
-         System.out.println(coverFileString);
       }
 
 
