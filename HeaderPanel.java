@@ -8,7 +8,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -30,13 +29,13 @@ public class HeaderPanel extends JPanel implements ActionListener {  // class fo
     String searchString; 
      
     HeaderPanel() throws IOException {
-        title.setFont(new Font("Calibri", Font.BOLD,65));
+        title.setFont(new Font("Helvetica", Font.PLAIN,65));
         title.setForeground(Color.white);
         title.setBounds(340, -90, 800, 300);
 
-        textField.setBounds(460, 120, 200, 30);
+        textField.setBounds(460, 110, 200, 30);
         searchButton.addActionListener(this); 
-        searchButton.setBounds(662,119,44,33);
+        searchButton.setBounds(662,109,44,33);
         searchButton.setFont(new Font("Calibri", Font.BOLD,20));
 
         userIconButton.addActionListener(this);
@@ -48,7 +47,7 @@ public class HeaderPanel extends JPanel implements ActionListener {  // class fo
 
         String[] filters = {"filter","Rock","Pop","Country"};
         JComboBox filterMenu = new JComboBox(filters);
-        filterMenu.setBounds(710,121,95,31);    
+        filterMenu.setBounds(710,111,95,31);    
         
         this.add(filterMenu);
         this.setBackground(Color.BLACK);
@@ -66,7 +65,7 @@ public class HeaderPanel extends JPanel implements ActionListener {  // class fo
         Product[] inputProducts = null;
 
         if(e.getSource()==userIconButton){
-            Window.displayLoginPage();        
+            WindowManager.displayLoginPage();        
         }
 
         try {
@@ -93,4 +92,3 @@ public class HeaderPanel extends JPanel implements ActionListener {  // class fo
         return searchString;
     }
 }
-

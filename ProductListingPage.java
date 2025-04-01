@@ -1,16 +1,3 @@
-/*The Page class is supposed to represent a webpage which is the GUI portion of the 
-website that users interact with. It will have 
-METHODS:
-    Scroll:   a person can scroll up and down webpage
-    GUI:      a method for actually displaying 
-    Navigate: a method from going from one page to another
-RESPONSIBILITYS:
-    Search:   calls upon class to search for things ???
-
-
-    MUST HAVE productPanel.java, products folder, MyFrame.java
-*/
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -18,29 +5,38 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.io.IOException;
 
-import javax.swing.JLabel;
+import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.border.Border;
 
 public class ProductListingPage extends JPanel{
     static JPanel containerPanel = new JPanel(); 
     static JPanel centerPanel = new JPanel();
     static JPanel topPanel = new JPanel();
-    static JScrollPane scrollPane = new JScrollPane(centerPanel);   
-    static JLabel label = new JLabel("test Label");   
+    static JScrollPane scrollPane = new JScrollPane(centerPanel);
+    static JPanel spacerPanel = new JPanel();    
+    Border border = BorderFactory.createLineBorder(Color.black, 5);
     
         ProductListingPage(){
             try {
+                spacerPanel.setSize(new Dimension(40,40));
+                spacerPanel.setBackground(Color.white);
+
                 HeaderPanel headerContainer = new HeaderPanel();            //container for the title/search bar 
         
                 topPanel.setBackground(Color.BLACK);
+                //topPanel.setLayout(new BorderLayout());
                 topPanel.setPreferredSize(new Dimension(500,160));
                 topPanel.add(headerContainer);
-                
+
+                //topPanel.add(spacerPanel,BorderLayout.SOUTH); 
                 centerPanel.setLayout(new GridLayout(0,4,5,20));
                 centerPanel.setBackground(Color.WHITE);
                 
+                //scrollPane.setLayout(new BorderLayout());
                 scrollPane.getVerticalScrollBar().setUnitIncrement(10);
+                scrollPane.setBorder(border);
 
                 containerPanel.setLayout(new BorderLayout());
                 containerPanel.add(scrollPane,BorderLayout.CENTER); 
