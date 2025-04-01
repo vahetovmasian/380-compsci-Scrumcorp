@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.io.File;
 
-public class Account {
+public class Account1 {
     public static void main (String[] args) {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please Enter Your Email: ");
