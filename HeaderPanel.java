@@ -15,6 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 
 public class HeaderPanel extends JPanel implements ActionListener {  // class for handling search box/button
     JLabel title = new JLabel("CALIBRI VINYLS");
@@ -27,8 +28,16 @@ public class HeaderPanel extends JPanel implements ActionListener {  // class fo
     JButton userIconButton = new JButton(imageIcon);
 
     String searchString; 
+
+
      
     HeaderPanel() throws IOException {
+ try {
+    UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
+ } catch (Exception e) {
+            e.printStackTrace();
+ }
+        
         title.setFont(new Font("Helvetica", Font.PLAIN,65));
         title.setForeground(Color.white);
         title.setBounds(340, -90, 800, 300);
