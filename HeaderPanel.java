@@ -20,7 +20,7 @@ import javax.swing.UIManager;
 public class HeaderPanel extends JPanel implements ActionListener {  // class for handling search box/button
     JLabel title = new JLabel("CALIBRI VINYLS");
     JTextField textField = new JTextField("Search for Albums..."); 
-    JButton searchButton = new JButton("🔍");
+    JButton searchButton = new JButton("search");
 
     BufferedImage image = ImageIO.read(new File("icons/userIcon.png"));              
     Image resizedImage = image.getScaledInstance(40, 40, Image.SCALE_SMOOTH);
