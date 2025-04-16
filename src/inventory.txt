@@ -1,0 +1,35 @@
+Cowboy Carter,Beyonce,Country,19.99,2020,1, Vinyl,cowboycarter.png
+Cowboy Carter,Beyonce,Country,14.99,2020,1, CD,null
+If I Know Me,Morgan Wallen,Country,14.99,2018,2, Vinyl,ifiknowme.png
+If I Know Me,Morgan Wallen,Country,12.99,2018,2, CD, null
+At Folsom Prison,Johnny Cash,Country,16.99,1968,3, Vinyl,atfolsomprison.png
+At Folsom Prison,Johnny Cash,Country,14.99,1968,3, CD,null
+Coat of Many Colors,Dolly Parton,Country,13.99,1971,4, Vinyl,coatofmanycolors.png
+Coat of Many Colors,Dolly Parton,Country,11.99,1971,4, CD,null
+Nevermind,Nirvana,Rock,18.99,1991,5, Vinyl,nevermind.png
+Nevermind,Nirvana,Rock,16.99,1991,5, CD,null
+Siamese Dream,The Smashing Pumpkins,Rock,17.99,1993,6, Vinyl,siamese.png
+Siamese Dream,The Smashing Pumpkins,Rock,15.99,1993,6, CD,null
+Abbey Road,The Beatles,Rock,22.99,1969,7, Vinyl,abbeyroad.png
+Abbey Road,The Beatles,Rock,19.99,1969,7, CD,null
+Goodbye Yellow Brick Road,Elton John,Rock,20.99,1973,8, Vinyl,goodbyeyellowbrickroad.png
+Goodbye Yellow Brick Road,Elton John,Rock,18.99,1973,8, CD,null
+2014 Forest Hill Drive,J. Cole,HipHop,19.99,2014,9, Vinyl,2014foresthilldrive.png
+2014 Forest Hill Drive,J. Cole,HipHop,17.99,2014,9, CD,null
+The Miseducation of Lauryn Hill,Lauryn Hill,HipHop,16.99,1998,10, Vinyl,tmolh.png
+The Miseducation of Lauryn Hill,Lauryn Hill,HipHop,14.99,1998,10, CD,null
+2001,Dr.Dre,HipHop,14.99,1999,11, Vinyl,2001.png
+2001,Dr.Dre,HipHop,12.99,1999,11, CD,null
+m.A.A.d city,Kendrick Lamar,HipHop,17.99,2012,12, Vinyl,maadCity.png
+m.A.A.d city,Kendrick Lamar,HipHop,15.99,2012,12, CD,null
+Sour,Olivia Rodrigo,Pop,15.99,2021,13, Vinyl,sour.png
+Sour,Olivia Rodrigo,Pop,13.99,2021,13, CD,null
+Bad,Michael Jackson,Pop,14.99,1987,14, Vinyl,bad.png
+Bad,Michael Jackson,Pop,12.99,1987,14, CD,null
+Teenage Dream,Katy Perry,Pop,18.99,2010,15, Vinyl,teenagedream.png
+Teenage Dream,Katy Perry,Pop,16.99,2010,15, CD,null
+Honeymoon,Lana Del Rey,Pop,16.99,2015,16, Vinyl,honeymoon.png
+Honeymoon,Lana Del Rey,Pop,14.99,2015,16, CD,null
+Random Access Memory,Daft Punk,Electronic,19.99,2013,17, Vinyl,randomaccessmemory.png
+Random Access Memory,Daft Punk,Electronic,17.99,2013,17, CD,null
+end
