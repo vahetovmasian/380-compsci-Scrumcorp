@@ -69,7 +69,7 @@ public class Product {
 
     public static Product[] generateProductArray() throws FileNotFoundException{      //takes a line from txt file and creates an object product, then puts the product into an array.
         Product ProductArray[] = new Product[34];
-        Scanner input = new Scanner(new File("C:\\Users\\vahet\\eclipse-workspace\\DumbShit\\380\\380\\src\\inventory.txt")); 
+        Scanner input = new Scanner(new File("src/inventory.txt")); 
         int count = 0; 
         while(input.hasNextLine()){
             String[] array = input.nextLine().split(",");
