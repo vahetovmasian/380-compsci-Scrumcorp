@@ -1,8 +1,8 @@
 package gui;
 // this class manages the frame for all the pages to be on and swaps between pages 
-public class Window {
+public class WindowManager {
 
-	public Window() {
+	public WindowManager() {
 		
 	}
 	   public static void displayPage(Page page){

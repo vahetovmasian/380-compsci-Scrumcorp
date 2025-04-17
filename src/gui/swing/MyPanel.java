@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import gui.ScreenSize;
 
 public class MyPanel extends JPanel {
-	ScreenSize helper= new ScreenSize();
+	ScreenSize helper = new ScreenSize();
 	public MyPanel(){
 		
 	}
