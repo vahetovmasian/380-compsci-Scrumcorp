@@ -29,8 +29,7 @@ public class ScreenSize {
 	}
 	public Dimension createDim(int xDimRatio, int yDimRatio) {
 		   ScreenSize myScreen= new ScreenSize();
-		   Dimension myMonitorsDimensions= new Dimension(xDim/xDimRatio
-				   , myScreen.yDim/yDimRatio );
+		   Dimension myMonitorsDimensions= new Dimension(xDim/xDimRatio, myScreen.yDim/yDimRatio );
 		   return myMonitorsDimensions;
 	   }
 	

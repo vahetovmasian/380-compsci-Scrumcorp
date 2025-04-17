@@ -23,10 +23,10 @@ public class MyFrame extends JFrame{
 
 	
 
-	ScreenSize myScreen= new ScreenSize();
+	ScreenSize myScreen = new ScreenSize();
 			
-	int xDim =myScreen.xDim /2;
-	int yDim =myScreen.getYDim()  /3;
+	int xDim = myScreen.xDim /2;
+	int yDim = myScreen.getYDim()  /3;
 	
 	public MyFrame() {
 		
