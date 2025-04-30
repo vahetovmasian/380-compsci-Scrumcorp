@@ -34,7 +34,13 @@ public final class ScreenSize {
 		   Dimension myMonitorsDimensions= new Dimension(xDim/xDimRatio
 				   , myScreen.yDim/yDimRatio );
 		   return myMonitorsDimensions;
-	   }
+	}
+	static public int xRatio(int x) {
+		return x/getXDim();
+	}
+	static public int yRatio(int y) {
+		return y/getXDim();
+	}
 	
 	
 }

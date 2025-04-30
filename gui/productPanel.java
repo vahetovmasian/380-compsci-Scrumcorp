@@ -11,7 +11,6 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.border.Border;
 
-import backend.MyMouse;
 import backend.Product;
 import gui.swingfactory.*;
 
@@ -71,7 +70,7 @@ public class productPanel {
 	      finalPanel = addStufftoPanel(createMainProductPanel(), border);
 	      finalPanel.add( createProductItemlabel(image));
 	      finalPanel.add(createArtistLabel());
-	      MyMouse mouse = new MyMouse(finalPanel);
+	      MouseListenerFactory mouse = new MouseListenerFactory(finalPanel);
 	      return finalPanel;
    }
    

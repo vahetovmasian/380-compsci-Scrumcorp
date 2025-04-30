@@ -13,6 +13,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -21,8 +22,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import gui.HeaderPanel.defaultListener;
-import gui.constants.HeaderConstants;
+import gui.swingfactory.ActionListenerFactory.*;
+import gui.swingfactory.Constants;
 import gui.swingfactory.JButtonFactory;
 import gui.swingfactory.JLabelFactory;
 import gui.swingfactory.JPanelFactory;
@@ -50,17 +51,24 @@ public class HeaderPanel extends JPanel  {
    
    public void setDefaultStuff() {
 	   setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-	   setPreferredSize(HeaderConstants.PANELDIM);
-	   setBackground(HeaderConstants.BACKGROUNDCOLOR);
+	   setPreferredSize(Constants.HOME_H_P_PANELDIM);
+	   setBackground(Constants.HOME_H_P_BACKGROUNDCOLOR);
    }
    
+  
+   
    public void addDefaultStuff() {
-	   add(makeDefaultLabel());
+	   JPanel topHalf = new JPanel();
+	   topHalf= JPanelFactory.topHeaderLoginPage(makeDefaultLabel()
+			   , makeLoginButton(), makeShopingCartButton() );
+	   add(topHalf);
 	   System.out.println("Label was added ");
+	   System.out.println("Login Button was added ");
 	   add(makeTextDefaultField());
 	   System.out.println("Text field was added ");
 	   add(makeDefaultSearchButton());
-	   System.out.println("Button was added ");
+	   System.out.println("Search Button was added ");
+	   
    }
    
    /**
@@ -84,16 +92,32 @@ public class HeaderPanel extends JPanel  {
     */
    private JButton makeDefaultSearchButton() {
 	   JButton searchButton = JButtonFactory.defaultHeaderButton();
-	   searchButton.addActionListener(new defaultListener());
+	   searchButton.addActionListener(new DefaultSearchButton());
 	   return searchButton;
    }
    
    
-   	   public class defaultListener implements ActionListener {
-   			public void actionPerformed(ActionEvent e) {
-   				System.out.println("needs to be implemeneted");
-   			}
-   	   }
+   private JButton makeShopingCartButton() {
+	   JButton shopinButton = JButtonFactory.shopingCartButton();
+	   shopinButton.addActionListener(new ShopingButton());
+	   return shopinButton;
+	   
+   }
+   
+   	 
+   
+   private JButton makeLoginButton() {
+	   JButton loginButton = JButtonFactory.loginButton();
+	   loginButton.addActionListener(new LoginButton());
+	   return loginButton;
+	   
+   }
+   
+   //private JButton darkeningEffect(JButton button) {
+	   
+  // }
+   		
+   
    
    
    private JTextField makeTextDefaultField() {

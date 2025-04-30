@@ -40,6 +40,7 @@ import javax.swing.border.Border;
 public class ProductListingPage extends Page {
 	
     public ProductListingPage()   {
+    	
     }
 
 	@Override

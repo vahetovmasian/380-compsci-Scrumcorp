@@ -20,8 +20,8 @@ public class Main {
 			 * not work like this in future this is mainly for testing gui components
 			 * 
 			 */
-		
-		
+			
+			
 		
 			try {
 				GUIMain.startGUI();
