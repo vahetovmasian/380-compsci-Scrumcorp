@@ -46,7 +46,7 @@ public class AuthService {
         }
     }
 
-    private boolean isEmailRegistered(String email) throws SQLException {
+    private boolean isEmailRegistered(String email) throws SQLException { //helper method, checks if email is already used 
         String sql = "SELECT COUNT(*) FROM users WHERE email = ?";
 
         try (Connection conn = Database.getConnection();
