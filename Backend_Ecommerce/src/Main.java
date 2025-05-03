@@ -1,4 +1,4 @@
-import java.util.Map;
+//import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,9 +24,9 @@ public class Main {
             }
             System.out.println(" Logged in as: " + user.getUsername());
 
-            int userId = user.getUserId();
+            //int userId = user.getUserId();
 
-            // === Step 2: Add products to cart ===
+            /*// === Step 2: Add products to cart ===
             ProductService productService = new ProductService();
             CartService cartService = new CartService();
 
@@ -77,7 +77,7 @@ public class Main {
             } else {
                 System.out.println(" Payment failed.");
             }
-
+*/
         } catch (Exception e) {
             System.err.println(" Error: " + e.getMessage());
             e.printStackTrace();
