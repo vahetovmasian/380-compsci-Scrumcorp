@@ -30,11 +30,19 @@ public final class ScreenSize {
 		return xDim;
 	}
 	static public Dimension createDim(int xDimRatio, int yDimRatio) {
-		   ScreenSize myScreen= new ScreenSize();
-		   Dimension myMonitorsDimensions= new Dimension(xDim/xDimRatio
-				   , myScreen.yDim/yDimRatio );
+		   Dimension myMonitorsDimensions= new Dimension(getXDim()/xDimRatio
+				   , getYDim()/yDimRatio );
 		   return myMonitorsDimensions;
-	   }
+	}
+	/**
+	 * 	This returns the size of screen divided by 
+	 */
+	static public int xRatio(int x) {
+		return getXDim()/x;
+	}
+	static public int yRatio(int y) {
+		return getXDim()/y;
+	}
 	
 	
 }

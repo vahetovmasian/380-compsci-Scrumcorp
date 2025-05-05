@@ -1,6 +1,6 @@
 package gui.page;
 import  backend.Product;
-import gui.HeaderPanel;
+import gui.DefaultHeaderPanel;
 import gui.Page;
 import gui.productPanel;
 import gui.swingfactory.JFrameFactory;
@@ -40,11 +40,12 @@ import javax.swing.border.Border;
 public class ProductListingPage extends Page {
 	
     public ProductListingPage()   {
+    	
     }
 
 	@Override
 	public JPanel createHeaderPanel() {
-		HeaderPanel panel= new HeaderPanel();
+		DefaultHeaderPanel panel= new DefaultHeaderPanel();
 		return panel;
 	}
 

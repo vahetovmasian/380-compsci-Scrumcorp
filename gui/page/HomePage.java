@@ -2,14 +2,14 @@ package gui.page;
 
 import javax.swing.JPanel;
 
-import gui.HeaderPanel;
+import gui.DefaultHeaderPanel;
 import gui.Page;
 import gui.swingfactory.JPanelFactory;
 
 public class HomePage extends Page {
 
 	public JPanel createHeaderPanel() {
-		HeaderPanel panel = new HeaderPanel();
+		DefaultHeaderPanel panel = new DefaultHeaderPanel();
 		panel.makeDefaultPanel();
 		return panel;
 	}

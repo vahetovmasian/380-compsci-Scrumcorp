@@ -20,7 +20,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import gui.swingfactory.constants.LabelConstants;
+import gui.ScreenSize;
 
 	public class JLabelFactory  {
 	 
@@ -29,13 +29,25 @@ import gui.swingfactory.constants.LabelConstants;
 		}
 
 		public static JLabel defaultHeaderLabel() {
-				JLabel label = new JLabel(LabelConstants.TEXT);
-				label.setForeground(LabelConstants.COLOR);
-				label.setBounds(LabelConstants.XCORD, LabelConstants.YCORD, 
-						LabelConstants.XWIDTH , LabelConstants.YLENGTH);
-				label.setFont(LabelConstants.FONT);
+				JLabel label = new JLabel(Constants.HOME_H_L_TEXT);
+				label.setForeground(Constants.HOME_H_L_COLOR);
+				label.setBounds(Constants.HOME_H_L_XCORD, Constants.HOME_H_L_YCORD, 
+						Constants.HOME_H_L_XWIDTH , Constants.HOME_H_L_YLENGTH);
+				label.setFont(Constants.HOME_H_L_FONT);
 				label.setAlignmentX(Component.CENTER_ALIGNMENT);
 				return label;
 			}
-						
+		
+		public static JLabel defaultLogoLabel() {
+			ImageIcon logo = new ImageIcon("./src/gui/images/frameIcon.png");
+			
+			JLabel imageLabel = new JLabel(JButtonFactory.resizeImages(logo));
+			
+				
+			
+				
+			return imageLabel;
+		}
+		
+					
 }

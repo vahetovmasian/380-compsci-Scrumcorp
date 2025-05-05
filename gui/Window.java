@@ -12,7 +12,7 @@ import gui.swingfactory.JFrameFactory;
  * @author Vahet EthanG 
  *
  */
-public class Window {
+public class Window  {
 
 	/** Makes A MyFrame which will function as the main window for everything 
 	 * 

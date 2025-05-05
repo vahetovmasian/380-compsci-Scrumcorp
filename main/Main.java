@@ -1,8 +1,8 @@
 package main;
 import java.io.FileNotFoundException;
 
+import java.sql.*;
 import backend.*;
-import backend.SQL.SQLconnector;
 import gui.*;
 import gui.page.ProductListingPage;
 /**
@@ -13,15 +13,10 @@ import gui.page.ProductListingPage;
 public class Main {
 		
 	public static void main(String[] args) {
-		
-			/**
-			 * NEEDS TO BE REFRACTORED
-			 * currently works by directly making a commercePage, but should 
-			 * not work like this in future this is mainly for testing gui components
-			 * 
-			 */
-		
-		
+	
+			 
+		 
+			
 		
 			try {
 				GUIMain.startGUI();
@@ -33,5 +28,5 @@ public class Main {
 
 
 	}
+	}
 
-}
