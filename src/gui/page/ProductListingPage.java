@@ -1,5 +1,5 @@
 package gui.page;
-import  backend.Product;
+import backend.Product;
 import gui.DefaultHeaderPanel;
 import gui.Page;
 import gui.productPanel;
