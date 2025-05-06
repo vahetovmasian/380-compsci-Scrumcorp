@@ -1,0 +1,2 @@
+paymentId,orderId,amount,paymentMethod,dateProcessed,shippingId,billingId
+1,1,49.97,CREDIT_CARD,1746491500265,1,1
