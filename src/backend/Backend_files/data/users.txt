@@ -1,0 +1,2 @@
+userId,username,email,password,dateCreated
+1,testuser,test@email.com,password123,1746491500235
