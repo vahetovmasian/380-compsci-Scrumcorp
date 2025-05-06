@@ -1,4 +1,4 @@
-﻿title,artist,genre,price,releaseYear,productId,mediaType
+Title,Artist,Genre,Price,ReleaseYear,ProductNum,MediaType
 Cowboy Carter,Beyonce,Country,19.99,2020,1, Vinyl
 Cowboy Carter,Beyonce,Country,14.99,2020,2, CD
 If I Know Me,Morgan Wallen,Country,14.99,2018,3, Vinyl

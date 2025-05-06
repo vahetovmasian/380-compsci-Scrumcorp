@@ -1,2 +1,2 @@
-userId,username,email,password,dateCreated
-1,testuser,test@email.com,password123,1746491500235
+userID,username,email,password,date_created
+1,sarah,sarah.hermida.306@my.csun.edu,123,2025-05-05 22:59:38.553

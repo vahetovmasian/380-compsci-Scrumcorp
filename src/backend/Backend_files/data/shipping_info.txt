@@ -1,2 +1,4 @@
-shippingId,userId,fullName,address,city,state,zipCode
-1,1,name,address,city,CA,12345
+ShippingID,UserID,FullName,Address,City,State,ZipCode
+1,1,sarah,address,Los Angeles,CA,900322
+1,sarah,address,Los Angeles,CA,90032
+2,1,sarah,address,Los Angeles,CA,90032

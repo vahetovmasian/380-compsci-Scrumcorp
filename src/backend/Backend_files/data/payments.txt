@@ -1,2 +1,4 @@
-paymentId,orderId,amount,paymentMethod,dateProcessed,shippingId,billingId
-1,1,49.97,CREDIT_CARD,1746491500265,1,1
+PaymentID,OrderID,Amount,Method,Timestamp,ShippingID,BillingID
+1,1,94.94,CREDIT_CARD,1746511178586,2,2
+2,2,94.94,CREDIT_CARD,1746571403155,2,2
+3,3,94.94,CREDIT_CARD,2025-05-06 15:48:24.78,2,2

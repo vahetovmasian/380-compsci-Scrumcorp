@@ -1,2 +1,4 @@
-billingId,userId,fullName,address,city,state,zipCode,cardNumber,cardExpiry,cardCvv
-1,1,name,adress,city,CA,12345,1111111111111111,01/01,123
+BillingID,UserID,FullName,Address,City,State,ZipCode,CardNumber,CardExpiry,CardCVV
+1,1,sarah,address,Los Angeles,CA,90032,4111111111111111,12/25,1232,
+1,sarah,address,Los Angeles,CA,90032,4111111111111111,12/25,123
+2,1,sarah,address,Los Angeles,CA,90032,4111111111111111,12/25,123
