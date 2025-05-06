@@ -1,2 +1,0 @@
-shippingId,userId,fullName,address,city,state,zipCode
-1,1,name,address,city,CA,12345

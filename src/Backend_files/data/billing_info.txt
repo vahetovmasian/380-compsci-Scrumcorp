@@ -1,2 +1,0 @@
-billingId,userId,fullName,address,city,state,zipCode,cardNumber,cardExpiry,cardCvv
-1,1,name,adress,city,CA,12345,1111111111111111,01/01,123
