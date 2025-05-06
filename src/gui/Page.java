@@ -39,13 +39,6 @@ abstract public class Page {
 	 
 	 abstract public JPanel addComponentsToMyFrame();
 	 
-	 public void addScrollWheel(JPanelFactory panel) {
-		 frame.addScrollWheel(panel);
-	 }
-	 
-	 
-	 
-	 
 	 
 		
 	
